@@ -1,0 +1,7 @@
+{
+      "SLEEP_TIME": 1000,
+      "PORT": 3000,
+      "MQ_HOST": "52.66.78.130",
+      "MONGO_HOST": "localhost",
+      "DB_NAME": "foodhub-db"
+}

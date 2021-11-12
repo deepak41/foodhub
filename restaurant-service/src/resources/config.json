@@ -1,0 +1,8 @@
+{
+      "SLEEP_TIME": 1000,
+      "MQ_HOST": "52.66.78.130",
+      "MONGO_HOST": "localhost",
+      "DB_NAME": "foodhub-db",
+      "PREFETCH_COUNT": 2,
+      "ORDER_DELIVERY_TIME": 10000
+}

@@ -1,0 +1,60 @@
+# YML version
+version: '3'
+
+# Define all the services in the app
+services:
+  # MongoDB
+  mongo:
+    image: mongo:4.2
+    logging: 
+      driver: none # disable logging
+    ports:
+      - '27017:27017'
+  
+  # RabbitMQ
+  rabbitmq:
+    image: rabbitmq:3.8.9
+    logging: 
+      driver: none # disable logging
+    ports:
+      - '5672:5672'
+
+  order-service:
+    restart: always # automatically restart if the app fails
+    build: ./order-service # builds the image from the dockerfile present in the order-service directory
+    image: deepak661/foodhub-order-service
+    depends_on:
+      - mongo
+      - rabbitmq
+    environment: # environment variables
+      - PORT=3000
+      - MQ_HOST=rabbitmq
+      - MONGO_HOST=mongo
+      - SLEEP_TIME=20000
+    ports: 
+      - '3000:3000' # host-port:container-port
+  
+  restaurant-service:
+    restart: always
+    build: ./restaurant-service
+    image: deepak661/foodhub-restaurant-service
+    depends_on:
+      - mongo
+      - rabbitmq
+    environment:
+      - MQ_HOST=rabbitmq
+      - MONGO_HOST=mongo
+      - PREFETCH_COUNT=3 # Max orders that can be processed simultaneously
+      - ORDER_DELIVERY_TIME=20000 # Time taken for one order to get delivered
+      - SLEEP_TIME=20000
+  
+  email-service:
+    restart: always
+    build: ./email-service
+    image: deepak661/foodhub-email-service
+    depends_on:
+      - rabbitmq
+    environment:
+      - MQ_HOST=rabbitmq
+      - PREFETCH_COUNT=3
+      - SLEEP_TIME=20000

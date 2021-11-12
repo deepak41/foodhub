@@ -1,0 +1,5 @@
+{
+      "SLEEP_TIME": 1000,
+      "MQ_HOST": "52.66.78.130",
+      "PREFETCH_COUNT": 2
+}

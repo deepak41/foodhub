@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules
+**/node_modules
+
+**/package-lock.json
+
+email-service/src/resources/api-keys.json
+
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
