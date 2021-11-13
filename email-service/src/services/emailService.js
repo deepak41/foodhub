@@ -1,9 +1,11 @@
-var keys = require("../resources/api-keys");
 require("../resources/mailin");
+const path = require('path'); 
+var fs = require('fs');
+var keys = JSON.parse(fs.readFileSync(path.join(__dirname, '../resources/api-keys.json'), 'utf8'));
 
 // Send Email
 sendEmail = (mailOptions, callback) => {
-	var client = new Mailin("https://api.sendinblue.com/v2.0", keys['sendinblue-key']);
+	var client = new Mailin("https://api.sendinblue.com/v2.0", keys.sendinblueKey);
 	var input = { 
 		"id" : 28,
 		"to" : mailOptions.to,
