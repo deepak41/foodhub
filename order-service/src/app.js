@@ -18,6 +18,15 @@ startServer = () => {
     // middleware to parse request
     app.use(express.json());
 
+    // cors
+    app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Authorization, Content-Type, Accept");
+        res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+        res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+        next();
+    });
+
     // initialize all routes
     initializeRoutes(app);
 
