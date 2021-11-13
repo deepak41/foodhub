@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+   <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="row">
+    <div class="col-6"><h2>Items</h2></div>
+    <div class="col-6" style="text-align: right;">
+      <button type="button" class="btn btn-info mt-3" onclick="placeOrder()"><i class="fas fa-clipboard-check"></i> Place Order</button>
+    </div>
+
+  </div>
+
+  <br/>
+
+  <div class="row">
+
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" id="itemImage" src="img/burger.jpeg" alt="burger">
+        <div class="card-body">
+          <h4 class="card-title">Burger</h4>
+          <p class="card-title">Choose Quantity:</p>
+          <form name="burger">
+            <div class="options d-flex flex-fill">
+               <select class="custom-select ml-1" name="quantity" value="">
+                  <option value="0">0</option>
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+               </select>
+             </div>
+             <div class="buy d-flex justify-content-between align-items-center">
+               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+                <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" id="itemImage" src="img/fries.jpg" alt="fries">
+        <div class="card-body">
+          <h4 class="card-title">Fries</h4>
+          <p class="card-title">Choose Quantity:</p>
+          <form name="fries">
+            <div class="options d-flex flex-fill">
+               <select class="custom-select ml-1" name="quantity" value="">
+                  <option value="0">0</option>
+                   <option selected value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+               </select>
+             </div>
+             <div class="buy d-flex justify-content-between align-items-center">
+               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+                <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+      <div class="card">
+        <img class="card-img" id="itemImage" src="img/coke.jpg" alt="coke">
+        <div class="card-body">
+          <h4 class="card-title">Coke</h4>
+          <p class="card-title">Choose Quantity:</p>
+          <form name="coke">
+            <div class="options d-flex flex-fill">
+               <select class="custom-select ml-1" name="quantity" value="">
+                  <option value="0">0</option>
+                   <option selected value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+               </select>
+             </div>
+             <div class="buy d-flex justify-content-between align-items-center">
+               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+                <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+             </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<script type="text/javascript" src="js/product.js"></script>
+</body>
+</html>
