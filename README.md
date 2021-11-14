@@ -1,6 +1,6 @@
 # FoodHub
 
-A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ and MongoDB. <br><br>
+A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ, MongoDB and Docker. <br><br>
 
 ## Getting Started with Docker
 **Go to the project root folder and run the app with this single command:**
