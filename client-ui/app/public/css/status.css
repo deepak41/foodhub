@@ -12,7 +12,7 @@ body {
 
 #details {
   border-collapse: collapse;
-  width: 50%;
+  width: 40%;
 }
 
 #details td, #details th {
@@ -28,7 +28,7 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #515304;
   color: white;
 }
 
@@ -36,7 +36,7 @@ body {
 /* Items */
 #items {
   border-collapse: collapse;
-  width: 30%;
+  width: 20%;
 }
 
 #items td, #items th {
@@ -58,5 +58,9 @@ body {
 
 h1 {
   color: grey;
+}
+
+h4 {
+  color: #055E8E;
 }
 
