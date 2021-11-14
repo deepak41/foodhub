@@ -3,7 +3,6 @@ addRow("STATUS", data.status);
 addRow("BILL AMOUNT", data.total);
 
 data.items.forEach((item) => {
-  console.log(item)
   showItems(item.name, item.quantity);
 });
 
@@ -41,11 +40,12 @@ function formatStatusValue(rowValue) {
 	if (rowValue.innerText == 'pending') {
 		rowValue.style.color = 'red';
 	} else if (rowValue.innerText == 'accepted') {
-		rowValue.style.color = 'blue'
+		rowValue.style.color = '#4758C2'
 	} else {
-		rowValue.style.color = 'green'
+		rowValue.style.color = '#2DA72E'
 	}
 	rowValue.style.textTransform = "uppercase";
+	rowValue.style.fontWeight = "bold";
 }
 
 function formatBillValue(rowValue) {

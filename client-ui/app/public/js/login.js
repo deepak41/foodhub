@@ -1,6 +1,7 @@
 // Login user
 function login(form) {
-	redirect("/product", {email: form.email.value});
+	if(form.email.value)
+		redirect("/product", {email: form.email.value});
 }
 
 // Redirect
