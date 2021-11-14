@@ -2,9 +2,9 @@
 
 
 :root {
-	--dark-color-a: #003638;
-	--dark-color-b: #055052;
-	--light-color-b: #D7EE88;
+	--dark-color-a: #E02401;
+	--dark-color-b: #F78812;
+	--light-color-b: #AB6D23;
 	--light-color: #F3F2C9;
 	
 	--success-color: #65ce65;
@@ -285,6 +285,6 @@ i.fas.fa-paper-plane{
 	width:5.5%
 }
 
-.msg-input, .btn, #username, #room {
+.msg-input, .btn, #email, #room {
     font-family: 'Segoe UI', sans-serif;
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="css/status.css" />
+	</head>
+	<body>
+		<div class="mycontainer">
+			<div>
+				<h1>Order Status</h1>
+				<table id="details"></table>
+			</div>
+			<div>
+				<h1>Items</h1>
+				<table id="items"></table>
+			</div>	
+
+		</div>
+		<script>
+		  var data = <%- JSON.stringify(data) %>;
+		</script>
+		<script type="text/javascript" src="js/status.js"></script>
+	</body>
+</html>
