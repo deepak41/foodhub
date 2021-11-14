@@ -14,19 +14,18 @@
     <div class="col-6" style="text-align: right;">
       <button type="button" class="btn btn-info mt-3" onclick="placeOrder()"><i class="fas fa-clipboard-check"></i> Place Order</button>
     </div>
-
   </div>
-
   <br/>
-
   <div class="row">
-
     <div class="col-12 col-sm-8 col-md-6 col-lg-4">
       <div class="card">
         <img class="card-img" id="itemImage" src="img/burger.jpeg" alt="burger">
         <div class="card-body">
           <h4 class="card-title">Burger</h4>
-          <p class="card-title">Choose Quantity:</p>
+          <div class="row">
+            <div class="col-6"><p class="card-title">Choose Quantity:</p></div>
+            <div class="col-6"><p id="burgerquant" style="color: blue; text-align: center;"></p></div>
+          </div>
           <form name="burger">
             <div class="options d-flex flex-fill">
                <select class="custom-select ml-1" name="quantity" value="">
@@ -37,7 +36,7 @@
                </select>
              </div>
              <div class="buy d-flex justify-content-between align-items-center">
-               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+               <div class="price text-success"><h5 class="mt-4">$100</h5></div>
                 <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
              </div>
           </form>
@@ -50,7 +49,10 @@
         <img class="card-img" id="itemImage" src="img/fries.jpg" alt="fries">
         <div class="card-body">
           <h4 class="card-title">Fries</h4>
-          <p class="card-title">Choose Quantity:</p>
+          <div class="row">
+            <div class="col-6"><p class="card-title">Choose Quantity:</p></div>
+            <div class="col-6"><p id="friesquant" style="color: blue; text-align: center;"></p></div>
+          </div>
           <form name="fries">
             <div class="options d-flex flex-fill">
                <select class="custom-select ml-1" name="quantity" value="">
@@ -61,7 +63,7 @@
                </select>
              </div>
              <div class="buy d-flex justify-content-between align-items-center">
-               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+               <div class="price text-success"><h5 class="mt-4">$50</h5></div>
                 <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
              </div>
           </form>
@@ -75,7 +77,10 @@
         <img class="card-img" id="itemImage" src="img/coke.jpg" alt="coke">
         <div class="card-body">
           <h4 class="card-title">Coke</h4>
-          <p class="card-title">Choose Quantity:</p>
+          <div class="row">
+            <div class="col-6"><p class="card-title">Choose Quantity:</p></div>
+            <div class="col-6"><p id="cokequant" style="color: blue; text-align: center;"></p></div>
+          </div>
           <form name="coke">
             <div class="options d-flex flex-fill">
                <select class="custom-select ml-1" name="quantity" value="">
@@ -86,7 +91,7 @@
                </select>
              </div>
              <div class="buy d-flex justify-content-between align-items-center">
-               <div class="price text-success"><h5 class="mt-4">$125</h5></div>
+               <div class="price text-success"><h5 class="mt-4">$20</h5></div>
                 <button type="button" class="btn btn-danger mt-3" onclick="addToCart(form)"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
              </div>
           </form>
@@ -97,7 +102,9 @@
 
   </div>
 </div>
-
+<script>
+  var email = <%- JSON.stringify(email) %>;
+</script>
 <script type="text/javascript" src="js/product.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ const sendConfirmation = (order, orderChannel) => {
         if (error) {
             logger.error(`Failed to send confirmation email to ${orderContent.email} for order ${orderContent._id}`);
         } else {
-            logger.info(`Confirmation email sent successfully to ${orderContent.email} for order ID ${orderContent._id}`);
+            logger.info(`Order confirmation email sent to ${orderContent.email} for order ID ${orderContent._id}`);
             orderChannel.ack(order);
         }
       });

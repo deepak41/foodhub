@@ -9,11 +9,11 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 
 // Set public directory
-app.use(express.static(path.join(__dirname, 'app/client')));
+app.use(express.static(path.join(__dirname, 'app/public')));
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'app/client/views'));
+app.set('views', path.join(__dirname, 'app/public/views'));
 
 // Initializing routes
 routes(app);

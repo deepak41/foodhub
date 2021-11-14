@@ -1,7 +1,7 @@
 const ITEM_PRICE = {
-    burger: 50.0,
-    fries: 20.0,
-    coke: 10.0  
+    burger: 100,
+    fries: 50,
+    coke: 20  
 }
 
 const ORDER_SERVICE_WELCOME_MSG = 'Welcome to the FoodHub order service!'
