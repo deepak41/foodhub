@@ -7,7 +7,7 @@ services:
   mongo:
     image: mongo:4.2
     logging: 
-      driver: none # disable logging
+      driver: none
     ports:
       - '27017:27017'
   
@@ -15,13 +15,13 @@ services:
   rabbitmq:
     image: rabbitmq:3.8.9
     logging: 
-      driver: none # disable logging
+      driver: none
     ports:
       - '5672:5672'
 
   order-service:
     restart: always # automatically restart if the app fails
-    build: ./order-service # builds the image from the dockerfile present in the order-service directory
+    build: ./order-service # builds the image from dockerfile present in the order-service directory
     image: deepak661/foodhub-order-service
     depends_on:
       - mongo
