@@ -5,10 +5,11 @@ let alignColorsAndTime = winston.format.combine(
         all:true
     }),
     winston.format.label({
-        label:'[EMAIL-SERVICE]'
+        label:'[EMAIL-SRV]'
     }),
+    winston.format.timestamp({format: '{DD-MMM hh:mm:ss A}'}),
     winston.format.printf(
-        info => `${info.label} ${info.message}`
+        info => `${info.label} ${info.timestamp} ${info.message}`
     )
 );
 
