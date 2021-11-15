@@ -21,7 +21,7 @@ Example:
 Install and start RabbitMQ and MongoDB. </br>
 
 ### Start all three node applications and client-ui
-To get the Node server running locally, go to the root folder of each app(order-service, restaurant-service, email-service & client-ui) and enter:
+To get the Node server running locally, go to the root folder of each app(order-service, restaurant-service & email-service) and enter:
 
 ```sh
 $ npm install
