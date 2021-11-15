@@ -1,5 +1,7 @@
 var items = [];
-var url = "http://localhost:3000/api/orders";
+const ORDER_SRV_HOST = process.env.ORDER_SRV_HOST || localhost;
+var url = `http://${ORDER_SRV_HOST}:3000/api/orders`;
+
 
 function addToCart(form) {
   document.getElementById(form.name + "quant").innerHTML = form.quantity.value;
