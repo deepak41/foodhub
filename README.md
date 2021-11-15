@@ -11,12 +11,12 @@ A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ,
 
 **To scale each component independently, use:**
   ```bash
-  $ sudo docker-compose up --scale <service-name>=<number-of-containers>
+  sudo docker-compose up --scale <service-name>=<number-of-containers>
   ```
 
 Example:
   ```bash
-  $ sudo docker-compose up --scale restaurant-service=2
+  sudo docker-compose up --scale restaurant-service=2
   ```
 ## Getting Started without Docker
 Install and start RabbitMQ and MongoDB. </br>
@@ -25,26 +25,26 @@ Install and start RabbitMQ and MongoDB. </br>
 To get the Node server running locally, go to the root folder of each app(order-service, restaurant-service & email-service) and enter:
 
 ```sh
-$ npm install
+npm install
 ```
 
 ```sh
-$ nodemon
+nodemon
 ```
 
 ## Common process to start Client-UI regardless of starting with/without Docker
 
 **Go to the client-ui folder and create .env file:**
   ```bash
-  $ sudo nano .env
+  sudo nano .env
   ```
 and paste `NODE_ENV=development` and save it.
 
 **Install dependencies and start server:**
   ```bash
-  $ sudo npm install
+  sudo npm install
   ```
   
   ```bash
-  $ sudo nodemon
+  sudo nodemon
   ```
