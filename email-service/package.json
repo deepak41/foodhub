@@ -10,7 +10,7 @@
   "author": "Deepak Kumar Singh",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.6.0",
+    "amqplib": "^0.8.0",
     "nconf": "^0.11.3",
     "nodemailer": "^6.4.17",
     "restler": "^3.4.0",
