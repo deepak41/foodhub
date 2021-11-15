@@ -18,7 +18,7 @@
 						"method": "GET",
 						"header": [],
 						"body": {},
-						"description": "Test the food order service."
+						"description": "Test the food order service"
 					},
 					"response": []
 				},
