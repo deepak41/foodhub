@@ -21,10 +21,10 @@ A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ,
   ```javascript
   sudo docker-compose up
   ```
-  OR, for detached mode
+    OR, for detached mode
   
   ```javascript
-  sudo docker-compose up
+  sudo docker-compose up -d
   ```
   
 
