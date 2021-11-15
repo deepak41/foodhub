@@ -3,22 +3,6 @@ version: '3'
 
 # Define all the services in the app
 services:
-  # MongoDB
-  mongo:
-    image: mongo:4.2
-    logging: 
-      driver: none
-    ports:
-      - '27017:27017'
-  
-  # RabbitMQ
-  rabbitmq:
-    image: rabbitmq:3.8.9
-    logging: 
-      driver: none
-    ports:
-      - '5672:5672'
-
   order-service:
     restart: always # automatically restart if the app fails
     build: ./order-service # builds the image from dockerfile present in the order-service directory
@@ -58,3 +42,31 @@ services:
       - MQ_HOST=rabbitmq
       - PREFETCH_COUNT=3
       - SLEEP_TIME=20000
+
+  client-ui:
+    restart: always
+    build: ./client-ui
+    image: deepak661/foodhub-client-ui
+    depends_on:
+      - order-service
+    environment:
+      - PORT=3000
+      - ORDER_SRV_HOST=order-service
+    ports: 
+      - '80:5000'
+  
+  # MongoDB
+  mongo:
+    image: mongo:4.2
+    logging: 
+      driver: none
+    ports:
+      - '27017:27017'
+  
+  # RabbitMQ
+  rabbitmq:
+    image: rabbitmq:3.8.9
+    logging: 
+      driver: none
+    ports:
+      - '5672:5672'
