@@ -1,8 +1,19 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+global.nconf = require('nconf');
 const routes = require('./app/server/routes');
-const PORT = 5000;
+
+// Load Environment variables from .env file
+require('dotenv').config()
+// Set up configs
+nconf.use('memory');
+// First load command line arguments
+nconf.argv();
+// Load environment variables
+nconf.env();
+// Load config file for the environment
+require('./app/config/environments/' + nconf.get('NODE_ENV'));
 
 
 const app = express();
@@ -19,4 +30,4 @@ app.set('views', path.join(__dirname, 'app/public/views'));
 routes(app);
 
 // Start server
-app.listen(PORT, () => console.log(`[APP] The server is running at localhost:${PORT}`));
+app.listen(nconf.get('NODE_PORT'), () => console.log(`[APP] The server is running at localhost:${nconf.get('NODE_PORT')}`));
