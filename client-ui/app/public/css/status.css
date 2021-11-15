@@ -9,7 +9,6 @@ body {
   margin-left: 100px;
 }
 
-
 #details {
   border-collapse: collapse;
   width: 40%;
@@ -28,7 +27,7 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #515304;
+  background-color: #316B83;
   color: white;
 }
 
@@ -52,7 +51,7 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #860505;
+  background-color: #6D8299;
   color: white;
 }
 
@@ -61,6 +60,6 @@ h1 {
 }
 
 h4 {
-  color: #055E8E;
+  color: #961717;
 }
 
