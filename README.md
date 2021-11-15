@@ -30,3 +30,20 @@ $ npm install
 ```sh
 $ nodemon
 ```
+
+## Common process to start Client-UI regardless of starting with/without Docker
+Install and start RabbitMQ and MongoDB. </br>
+
+**Go to the client-ui folder and create .env file:**
+  ```bash
+  $ sudo nano .env
+  ```
+and past `NODE_ENV=development`
+
+**Install dependencies and start server:**
+  ```bash
+  $ sudo npm install
+  ```
+    ```bash
+  $ sudo nodemon
+  ```
