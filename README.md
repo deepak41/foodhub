@@ -38,7 +38,7 @@ Install and start RabbitMQ and MongoDB. </br>
   ```bash
   $ sudo nano .env
   ```
-and past `NODE_ENV=development`
+and paste `NODE_ENV=development` and save it.
 
 **Install dependencies and start server:**
   ```bash
