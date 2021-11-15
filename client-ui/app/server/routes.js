@@ -11,7 +11,8 @@ function routes(app) {
 	app.post('/product', (req, res) => {
 		var data = JSON.parse(req.body.data);
 	    res.render('product', { 
-	    	email: data.email
+	    	email: data.email,
+	    	ORDER_SRV: nconf.get('ORDER-SRV')
 	    })
 	});
 

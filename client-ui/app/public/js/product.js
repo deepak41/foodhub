@@ -1,5 +1,5 @@
 var items = [];
-var url = "http://localhost:3000/api/orders";
+var order_url = `http://${ORDER_SRV}:3000/api/orders`;
 
 function addToCart(form) {
   document.getElementById(form.name + "quant").innerHTML = form.quantity.value;
@@ -20,7 +20,7 @@ function addToCart(form) {
 }
 
 function placeOrder() {
-  sendToOrderService(url, items, email).then(data => {
+  sendToOrderService(order_url, items, email).then(data => {
     var url = "/status?order_id=" + data._id;
     window.location.replace(url)
   });

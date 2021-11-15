@@ -7,14 +7,15 @@
     "start": "node index.js",
     "dev": "nodemon index"
   },
-  "author": "Deepak Kumar Singh",
-  "keywords": [],
   "author": "",
+  "keywords": [],
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "nconf": "^0.11.3",
     "request": "^2.88.2"
   },
   "devDependencies": {

@@ -7,7 +7,7 @@ services.getStatus = function(orderID, callback) {
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		url: 'http://localhost:3000/api/orders/' + orderID,
+		url: `http://${nconf.get('ORDER-SRV')}:3000/api/orders/${orderID}`
 	}, 
 	function(error, response, body) {
 		var data = JSON.parse(body);
