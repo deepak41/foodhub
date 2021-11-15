@@ -1,16 +1,13 @@
-FROM node:15.5.0
+FROM node:14.18.1
 
 # Specify the working directory INSIDE the container
 WORKDIR /usr/src/app
 
-# Move the package.json and package-lock.json into the container to install dependencies
-COPY package*.json ./
+# Copy the source code
+COPY . .
 
 # Install the dependencies
 RUN npm install
-
-# Copy the source code
-COPY . .
 
 # Start the node server
 CMD ["npm", "start"]

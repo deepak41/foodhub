@@ -10,7 +10,7 @@
   "author": "Deepak Kumar Singh",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.6.0",
+    "amqplib": "^0.8.0",
     "mongoose": "^5.11.11",
     "nconf": "^0.11.3",
     "winston": "^3.3.3"
