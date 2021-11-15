@@ -32,7 +32,6 @@ $ nodemon
 ```
 
 ## Common process to start Client-UI regardless of starting with/without Docker
-Install and start RabbitMQ and MongoDB. </br>
 
 **Go to the client-ui folder and create .env file:**
   ```bash
