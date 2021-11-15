@@ -3,7 +3,7 @@
 A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ, MongoDB and Docker. <br><br>
 
 ## Getting Started
-**Add api key in email service:**  
+**Add email api key in email service:**  
 
   ```javascript
   sudo nano email-service/src/resources/api-keys.json
