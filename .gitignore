@@ -3,6 +3,7 @@ node_modules
 **/node_modules
 
 **/package-lock.json
+.env
 
 email-service/src/resources/api-keys.json
 
