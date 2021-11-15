@@ -58,7 +58,10 @@ nodemon
   ```bash
   sudo nano .env
   ```
-and paste `NODE_ENV=development` and save it.
+and add these lines and save the file
+  ```bash
+  NODE_ENV=development
+  ```
 
 **Install dependencies and start server:**
   ```bash
