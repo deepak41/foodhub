@@ -4,7 +4,7 @@ A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ,
 
 ## Getting Started with Docker
 **Go to the project root folder and run the app with this single command:**
-  ```bash
+  ```javascript
   $ sudo docker-compose up
   ```
 
