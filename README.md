@@ -45,6 +45,6 @@ and past `NODE_ENV=development`
   $ sudo npm install
   ```
   
-    ```bash
+  ```bash
   $ sudo nodemon
   ```
