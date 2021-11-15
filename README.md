@@ -21,6 +21,12 @@ A message-based food ordering system developed with NodeJS, ExpressJS, RabbitMQ,
   ```javascript
   sudo docker-compose up
   ```
+  OR, for detached mode
+  
+  ```javascript
+  sudo docker-compose up
+  ```
+  
 
 **To scale each component independently, use:**
   ```bash
