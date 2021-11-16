@@ -20,6 +20,7 @@ function addToCart(form) {
 }
 
 function placeOrder() {
+  if(!items.length) return 0;
   sendToOrderService(order_url, items, email).then(data => {
     var url = "/status?order_id=" + data._id;
     window.location.replace(url)
